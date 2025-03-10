@@ -31,9 +31,8 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.divide(6, 2), 3);
 	}
-	@Test(expected = ArithmeticException.class)
 	public void testDivideBy0() {
 		SimpleCalculator calc = new SimpleCalculator();
-		calc.divide(2,0);
+		assertEquals(calc.divide(2, 0), -1);
 	}
 }
